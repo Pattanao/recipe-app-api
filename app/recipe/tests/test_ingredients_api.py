@@ -43,7 +43,7 @@ class PrivateIngredientsAPITests(TestCase):
         self.client.force_authenticate(user=self.user)
 
     def test_retrieve_ingredients(self):
-        """Test retrieving ingredients."""
+        """Test retrieving a list of ingredients."""
         Ingredient.objects.create(user=self.user, name="Kale")
         Ingredient.objects.create(user=self.user, name="Vanilla")
 
